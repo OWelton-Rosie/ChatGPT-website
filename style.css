@@ -1,32 +1,116 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+/* Reset & Base Styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --primary: #0077ff;
+}
+
+.dark-mode {
+  --bg: #111111;
+  --text: #f4f4f4;
+  --primary: #00bfff;
+}
+
+/* Header */
+.header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  padding: 1rem 2rem;
+  background: var(--primary);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.container {
-  text-align: center;
-  padding: 2rem;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border-radius: 10px;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-button {
-  padding: 0.7rem 1.2rem;
-  font-size: 1rem;
-  color: white;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0056b3;
+#toggleTheme {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    display: none;
+    background: var(--primary);
+    padding: 1rem;
+  }
+
+  .nav.active ul {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
 }
