@@ -1,3 +1,8 @@
+Even the `README` is AI-generated
+
+<hr>
+
+
 # ChatGPT Website — AI-Generated Example Project
 
 ## Overview
