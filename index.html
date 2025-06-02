@@ -2,51 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Advanced Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MySite - Professional Web Solutions</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="logo">MySite</div>
-    <nav class="nav" id="nav">
-      <ul>
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-    <button id="toggleTheme">🌙</button>
-    <div class="menu-icon" id="menu-icon">&#9776;</div>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">MySite</h1>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="icon-button" aria-label="Toggle dark mode">🌙</button>
+      <button id="mobile-toggle" class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
   </header>
 
-  <section id="home" class="section">
-    <h1>Welcome to MySite</h1>
-    <p>Explore the modern web with a stylish, responsive layout.</p>
-  </section>
+  <main>
+    <section id="home" class="section section--hero">
+      <div class="container">
+        <h2>Welcome to MySite</h2>
+        <p>Your modern solution for responsive, stylish websites.</p>
+      </div>
+    </section>
 
-  <section id="about" class="section hidden">
-    <h2>About Us</h2>
-    <p>We craft beautiful websites that work seamlessly across devices.</p>
-  </section>
+    <section id="about" class="section fade-in">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>We design intuitive websites that perform beautifully on any device.</p>
+      </div>
+    </section>
 
-  <section id="services" class="section hidden">
-    <h2>Services</h2>
-    <ul>
-      <li>Web Design</li>
-      <li>Development</li>
-      <li>SEO Optimization</li>
-    </ul>
-  </section>
+    <section id="services" class="section fade-in">
+      <div class="container">
+        <h2>Our Services</h2>
+        <ul class="services-list">
+          <li>Web Design</li>
+          <li>Front-End Development</li>
+          <li>Performance Optimization</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="contact" class="section hidden">
-    <h2>Contact</h2>
-    <p>Email: contact@example.com</p>
-  </section>
+    <section id="contact" class="section fade-in">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>Email us at <a href="mailto:contact@example.com">contact@example.com</a>.</p>
+      </div>
+    </section>
+  </main>
 
-  <footer>
-    <p>&copy; 2025 MySite. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 MySite. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
